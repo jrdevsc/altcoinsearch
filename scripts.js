@@ -12,19 +12,22 @@ var myData;
 
   $('#submit').on('click', function(e){
     e.preventDefault();
-    let myMaxPrice = $('#maxPrice').val();
-    let myMinVolume = $('#minVolume').val();
+    var myMaxPrice = $('#maxPrice').val();
+    myMaxPrice =  parseFloat(myMaxPrice);
+    var myMinVolume = $('#minVolume').val();
     myMinVolume = myMinVolume * 1000000;
-    let myMinMarketCap = $('#minMarketCap').val();
+    var myMinMarketCap =$('#minMarketCap').val();
     myMinMarketCap = myMinMarketCap * 1000000;
+
+
     filterMe(myData, myMaxPrice, myMinVolume, myMinMarketCap);
   })
 
   function filterMe(myData, myMaxPrice, myMinVolume, myMinMarketCap){
     for (c of myData)  {
-      let cPrice = parseInt(c.price_usd);
-      let cMinV = parseInt(c['24h_volume_usd']);
-      let cMinMC = parseInt(c.market_cap_usd);
+      let cPrice = parseFloat(c.price_usd);
+      let cMinV = parseFloat(c['24h_volume_usd']);
+      let cMinMC = parseFloat(c.market_cap_usd);
 // && myMinVolume >= cMinV && myMinMarketCap >= cMinMC
 // myMaxPrice >= cPrice && cMinV >= myMinVolume
       if(myMaxPrice >= cPrice && cMinV >= myMinVolume && cMinMC >= myMinMarketCap){
