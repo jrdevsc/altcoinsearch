@@ -30,9 +30,11 @@ var myData;
       let cMinMC = parseFloat(c.market_cap_usd);
 
       if(myMaxPrice >= cPrice && cMinV >= myMinVolume && cMinMC >= myMinMarketCap){
-        $('#coinName').append('<h3>'+c.name+'<em>('+c.symbol+')</em></h3><ul><li>Price USD: $'+c.price_usd+'</li><li>Market Cap: $ '+c.market_cap_usd+'</li><li>24H Volume: $'+cMinV+'</li><li>Change over 7D: '+c.percent_change_7d+'</li><li>Change over 24h: '+c.percent_change_24h+'</li></ul>');
+        $('#mTable').append('<tr><td>'+c.name+'</td><td>'+c.symbol+'</td><td>'+cPrice+'</td><td>'+cMinV+'</td><td>'+cMinMC+'</td><td class="change">'+c.percent_change_24h+'</td><td>'+c.percent_change_7d+'</td></tr>');
       }
+
     }
+  
   }
 
 
