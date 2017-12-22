@@ -28,10 +28,8 @@ var myData;
       let cPrice = parseFloat(c.price_usd);
       let cMinV = parseFloat(c['24h_volume_usd']);
       let cMinMC = parseFloat(c.market_cap_usd);
-// && myMinVolume >= cMinV && myMinMarketCap >= cMinMC
-// myMaxPrice >= cPrice && cMinV >= myMinVolume
+
       if(myMaxPrice >= cPrice && cMinV >= myMinVolume && cMinMC >= myMinMarketCap){
-        // console.log(c.name);
         $('#coinName').append('<h3>'+c.name+'<em>('+c.symbol+')</em></h3><ul><li>Price USD: $'+c.price_usd+'</li><li>Market Cap: $ '+c.market_cap_usd+'</li><li>24H Volume: $'+cMinV+'</li><li>Change over 7D: '+c.percent_change_7d+'</li><li>Change over 24h: '+c.percent_change_24h+'</li></ul>');
       }
     }
