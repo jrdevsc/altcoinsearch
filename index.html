@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AltCoinz</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="jumbotron">
+          <h1 class="text-center">AltCoinz</h1>
+          <form>
+            <div class="form-group">
+              <label>Max Price USD:</label>
+              <input type="number" id="maxPrice" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Min Volume: (in millions)</label>
+              <input type="number" id="minVolume" class="form-control">
+            </div>
+            <div class="form-group">
+              <label>Min Market Cap: (in millions)</label>
+              <input type="number" id="minMarketCap" class="form-control">
+            </div>
+            <button class="form-control" id="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div id="coinName"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>
